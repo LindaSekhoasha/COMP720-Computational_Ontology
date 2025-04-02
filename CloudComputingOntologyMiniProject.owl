@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#"
+     xml:base="http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    
+    <owl:Ontology rdf:about="">
+        <rdfs:comment xml:lang="en">This is an ontology that standardizes the description, classification, and management of cloud resources and services across different cloud providers. This ontology will facilitate automated resource provisioning, interoperability, and service discovery.</rdfs:comment>
+    </owl:Ontology>
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="#appliesToResourceType">
+        <rdfs:domain rdf:resource="#ServiceMetadataAndAttributes"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasCostModel">
+        <rdfs:domain rdf:resource="#CloudResourceTypes"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#hasPerformanceMetric">
+        <rdfs:domain rdf:resource="#CloudResourceTypes"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#hasSecurityFeature">
+        <rdfs:domain rdf:resource="#CloudResourceTypes"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasUnit">
+        <rdfs:domain rdf:resource="#ServiceMetadataAndAttributes"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="#providesResourceType">
+        <rdfs:domain rdf:resource="#CloudProvider"/>
+        <rdfs:domain rdf:resource="#CloudServiceModels"/>
+        <rdfs:range rdf:resource="#CloudResourceTypes"/>
+    </owl:ObjectProperty>
+    
+    <!-- Classes -->
+    <owl:Class rdf:about="#AvailabilityAndReliability">
+        <rdfs:subClassOf rdf:resource="#ServiceMetadataAndAttributes"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="#CloudProvider"/>
+    <owl:Class rdf:about="#CloudResourceTypes"/>
+    <owl:Class rdf:about="#CloudServiceModels"/>
+    <owl:Class rdf:about="#Compute">
+        <rdfs:subClassOf rdf:resource="#CloudResourceTypes"/>
+    </owl:Class>
+    <owl:Class rdf:about="#CostModels">
+        <rdfs:subClassOf rdf:resource="#ServiceMetadataAndAttributes"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Databases">
+        <rdfs:subClassOf rdf:resource="#CloudResourceTypes"/>
+    </owl:Class>
+    <owl:Class rdf:about="#DeploymentModel"/>
+    <owl:Class rdf:about="#IaaS">
+        <rdfs:subClassOf rdf:resource="#CloudServiceModels"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Networking">
+        <rdfs:subClassOf rdf:resource="#CloudResourceTypes"/>
+    </owl:Class>
+    <owl:Class rdf:about="#OntologyUseCases"/>
+    <owl:Class rdf:about="#PaaS">
+        <rdfs:subClassOf rdf:resource="#CloudServiceModels"/>
+    </owl:Class>
+    <owl:Class rdf:about="#PerformanceMetrics">
+        <rdfs:subClassOf rdf:resource="#ServiceMetadataAndAttributes"/>
+    </owl:Class>
+    <owl:Class rdf:about="#SaaS">
+        <rdfs:subClassOf rdf:resource="#CloudServiceModels"/>
+    </owl:Class>
+    
+    <!-- Individuals -->
+    <owl:NamedIndividual rdf:about="#AWS">
+        <rdf:type rdf:resource="#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="#Azure">
+        <rdf:type rdf:resource="#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="#GoogleCloud">
+        <rdf:type rdf:resource="#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="#HybridCloud">
+        <rdf:type rdf:resource="#DeploymentModel"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="#IBMCloud">
+        <rdf:type rdf:resource="#CloudProvider"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="#PrivateCloud">
+        <rdf:type rdf:resource="#DeploymentModel"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="#PublicCloud">
+        <rdf:type rdf:resource="#DeploymentModel"/>
+    </owl:NamedIndividual>
+    
+</rdf:RDF>
