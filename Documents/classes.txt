@@ -1,0 +1,135 @@
+ref:
+Cloud Computing: Concepts and Technologies by Sunilkumar Manvi, Gopal K. Shyam
+
+=============================================================
+Classes
+=============================================================
+Cloud
+Cloud Computing
+Cloud Service
+Service Vendor
+IBM
+Amazon
+Alpine Data Labs
+Kontangent
+AaaS
+DaaS
+SecaaS
+IAMaaS
+MaaS
+Cloud-Based IAM
+Data Safety
+Green Computing
+Cloud Storming
+Cloud Application
+Cloud Ware
+Cloud Provider
+Cloud Enabler
+Cloud Server
+Rackspace Cloud
+Cloud Platform
+Cluster Computing
+Computation
+Algorithm
+Amdal's Law
+Flynn's Classical Taxonomy
+Computer Resource
+Virtualization
+Virtual Machine
+Hypervisor
+Partitioning
+Isolation
+Encapsulation
+Consolidation
+Migration
+Cloning
+
+
+=============================================================
+Instances
+=============================================================
+Public Cloud
+Private Cloud
+Virtual Private Cloud
+Community Cloud
+Hybrid Cloud
+Google Cloud Platform
+Distributed Computing
+Parallel Computing
+SIMD
+MISD
+MIMD
+Paravirtualization
+Software virtualization
+Hardware virtualization
+
+
+=============================================================
+Axioms
+=============================================================
+AaaS is a Cloud Service
+DaaS is a Cloud Service
+SecaaS is a Cloud Service
+IAMaaS is a Cloud Service
+MaaS is a Cloud Service
+IAMaaS offers cloud‐based IAM
+Service Vendor offers Cloud Service
+IBM is a Service Vendor
+Amazon is a Service Vendor
+Alpine Data Labs is a Service Vendor
+Kontangent is a Service Vendor
+Public Cloud is an instance of Cloud
+Private Cloud is an instance of Cloud
+Virtual Private Cloud is an instance of Cloud
+Community Cloud is an instance of Cloud
+Hybrid Cloud is an instance of Cloud
+Cloud provides Data Safety
+Cloud Computing provides Green Computing
+Cloud Provider provides Cloud
+Cloud Computing has a Cloud Application
+Cloud Storming connects Cloud
+Cloud Ware manages Cloud Application
+Cloud Enabler enables Cloud Computing
+Rackspace Cloud is a Cloud Server
+Rackspace Cloud offers IaaS
+Google Cloud Platform is an instance of Cloud Platform
+Cluster Computing processes Cloud Application
+Distributed Computing is an instance of Computation
+Parallel Computing is an instance of Computation
+Cloud Computing has an Algorithm
+Amdal's Law is an Algorithm
+Flynn's Classical Taxonomy classifies parallel Computing
+SIMD is an instance of Parallel Computing
+MISD is an instance of Parallel Computing
+MIMD is an instance of Parallel Computing
+Virtualization is used for Cloud Computing
+Virtualization hides Computer Resource
+Hypervisor runs a Virtual Machine
+Paravirtualization is an instance of Virtualization
+Software virtualization is an instance of Virtualization
+Hardware virtualization is an instance of Virtualization
+Partitioning is a technique for Virtualization
+Isolation is a technique for Virtualization
+Encapsulation is a technique for Virtualization
+Consolidation is a technique for Virtualization
+Migration is a technique for Virtualization
+Cloning is a technique for Virtualization
+
+
+=============================================================
+Properties
+=============================================================
+offers
+is used for
+is a
+is an instance of
+provides
+connects
+has a
+manages
+enables
+processes
+classifies
+hides
+runs a
+is a technique for
