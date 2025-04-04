@@ -1,0 +1,239 @@
+@prefix : <http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology/> .
+
+<http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology> rdf:type owl:Ontology ;
+                                                                               rdfs:comment "This is an ontology that standardizes the description, classification, and management of cloud resources and services across different cloud providers. This ontology will facilitate automated resource provisioning, interoperability, and service discovery."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#appliesToResourceType
+:appliesToResourceType rdf:type owl:ObjectProperty ;
+                       rdfs:domain :ServiceMetadataAndAttributes ;
+                       rdfs:comment "Class - ServiceMetadataAndAttributes" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#hasCostModel
+:hasCostModel rdf:type owl:ObjectProperty ;
+              rdfs:domain :CloudResourceTypes ;
+              rdfs:comment "Class - CloudResourceTypes" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#hasPerformanceMetric
+:hasPerformanceMetric rdf:type owl:ObjectProperty ;
+                      rdfs:domain :CloudResourceTypes ;
+                      rdfs:comment "Class - CloudResourceTypes" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#hasSecurityFeature
+:hasSecurityFeature rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CloudResourceTypes ;
+                    rdfs:comment "Class - CloudResourceTypes" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#hasUnit
+:hasUnit rdf:type owl:ObjectProperty ;
+         rdfs:domain :ServiceMetadataAndAttributes ;
+         rdfs:comment "Class - ServiceMetadataAndAttributes" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#includesExample
+:includesExample rdf:type owl:ObjectProperty ;
+                 rdfs:domain :CloudServiceModels ;
+                 rdfs:comment "This is for the class CloudServiceModels" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#measuredBy
+:measuredBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :ServiceMetadataAndAttributes ;
+            rdfs:comment "Class - ServiceMetadataAndAttributes" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#offeredBy
+:offeredBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :DeploymentModel ;
+           rdfs:comment "Class - DeploymentModel" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#offersServiceModel
+:offersServiceModel rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CloudProvider ;
+                    rdfs:comment "Class - CloudProvider" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#providesResourceType
+:providesResourceType rdf:type owl:ObjectProperty ;
+                      rdfs:domain :CloudProvider ,
+                                  :CloudServiceModels ;
+                      rdfs:range :CloudResourceTypes ;
+                      rdfs:comment "Class - CloudProvider" ,
+                                   "Class - CloudServiceModels" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:domain :OntologyUseCases ;
+          rdfs:comment "Class - OntologyUseCases" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#supports
+:supports rdf:type owl:ObjectProperty ;
+          rdfs:domain :OntologyUseCases ;
+          rdfs:comment "Class - OntologyUseCases" .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#supportsUseCase
+:supportsUseCase rdf:type owl:ObjectProperty ;
+                 rdfs:domain :DeploymentModel ;
+                 rdfs:comment "Class - DeploymentModel" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#AvailabilityAndReliability
+:AvailabilityAndReliability rdf:type owl:Class ;
+                            rdfs:subClassOf :ServiceMetadataAndAttributes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#CloudProvider
+:CloudProvider rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#CloudResourceTypes
+:CloudResourceTypes rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#CloudServiceModels
+:CloudServiceModels rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#Compute
+:Compute rdf:type owl:Class ;
+         rdfs:subClassOf :CloudResourceTypes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#CostModels
+:CostModels rdf:type owl:Class ;
+            rdfs:subClassOf :ServiceMetadataAndAttributes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#Databases
+:Databases rdf:type owl:Class ;
+           rdfs:subClassOf :CloudResourceTypes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#DeploymentModel
+:DeploymentModel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#IaaS
+:IaaS rdf:type owl:Class ;
+      rdfs:subClassOf :CloudServiceModels .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#Networking
+:Networking rdf:type owl:Class ;
+            rdfs:subClassOf :CloudResourceTypes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#OntologyUseCases
+:OntologyUseCases rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#PaaS
+:PaaS rdf:type owl:Class ;
+      rdfs:subClassOf :CloudServiceModels .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#PerformanceMetrics
+:PerformanceMetrics rdf:type owl:Class ;
+                    rdfs:subClassOf :ServiceMetadataAndAttributes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#SaaS
+:SaaS rdf:type owl:Class ;
+      rdfs:subClassOf :CloudServiceModels .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#SecurityAndCompliance
+:SecurityAndCompliance rdf:type owl:Class ;
+                       rdfs:subClassOf :ServiceMetadataAndAttributes .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#ServiceMetadataAndAttributes
+:ServiceMetadataAndAttributes rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :CloudResourceTypes .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#AWS
+:AWS rdf:type owl:NamedIndividual ,
+              :CloudProvider .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#AutomatedResourceSelection
+:AutomatedResourceSelection rdf:type owl:NamedIndividual ,
+                                     :OntologyUseCases .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#Azure
+:Azure rdf:type owl:NamedIndividual ,
+                :CloudProvider .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#GoogleCloud
+:GoogleCloud rdf:type owl:NamedIndividual ,
+                      :CloudProvider .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#HybridCloud
+:HybridCloud rdf:type owl:NamedIndividual ,
+                      :DeploymentModel .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#IBMCloud
+:IBMCloud rdf:type owl:NamedIndividual ,
+                   :CloudProvider .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#Interoperability
+:Interoperability rdf:type owl:NamedIndividual ,
+                           :OntologyUseCases .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#MultiCloud
+:MultiCloud rdf:type owl:NamedIndividual ,
+                     :DeploymentModel .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#PrivateCloud
+:PrivateCloud rdf:type owl:NamedIndividual ,
+                       :DeploymentModel .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#PublicCloud
+:PublicCloud rdf:type owl:NamedIndividual ,
+                      :DeploymentModel .
+
+
+###  http://www.semanticweb.org/student/ontologies/2025/2/CloudComputingOntology#ServiceComposition
+:ServiceComposition rdf:type owl:NamedIndividual ,
+                             :OntologyUseCases .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
